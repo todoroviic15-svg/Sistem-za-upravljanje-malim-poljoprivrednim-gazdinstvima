@@ -1,0 +1,219 @@
+/* ============================================================
+   Sistem za upravljanje malim poljoprivrednim gazdinstvima
+   Zeleno-braon, prirodna poljoprivredna tema
+   ============================================================ */
+
+:root {
+    --boja-zelena-tamna: #2e5d32;
+    --boja-zelena: #4c7a3f;
+    --boja-zelena-svetla: #7caa57;
+    --boja-braon: #6f4e37;
+    --boja-braon-svetla: #a9824c;
+    --boja-bez: #f5f1e6;
+    --boja-zuta: #e0a83b;
+}
+
+body {
+    background-color: var(--boja-bez);
+    font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+    color: #3a3a2e;
+}
+
+/* ---------- Navigacija ---------- */
+.navbar-gazdinstvo {
+    background: linear-gradient(135deg, var(--boja-zelena-tamna) 0%, var(--boja-zelena) 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+}
+
+.navbar-gazdinstvo .navbar-brand {
+    font-weight: 700;
+    letter-spacing: .4px;
+    color: #fff !important;
+}
+
+.navbar-gazdinstvo .nav-link {
+    color: rgba(255, 255, 255, .85) !important;
+    font-weight: 500;
+    border-radius: .5rem;
+    margin: 0 .15rem;
+    transition: background-color .15s ease-in-out;
+}
+
+.navbar-gazdinstvo .nav-link:hover {
+    background-color: rgba(255, 255, 255, .12);
+    color: #fff !important;
+}
+
+.navbar-gazdinstvo .nav-link.active {
+    background-color: var(--boja-zuta);
+    color: #2e2e0e !important;
+}
+
+/* ---------- Kartice ---------- */
+.card {
+    border: none;
+    border-radius: 1rem;
+    transition: box-shadow .15s ease-in-out, transform .1s ease-in-out;
+}
+
+.card.shadow-sm:hover {
+    box-shadow: 0 .6rem 1.2rem rgba(46, 93, 50, .15) !important;
+    transform: translateY(-2px);
+}
+
+.card-header {
+    font-weight: 600;
+    border-radius: 1rem 1rem 0 0 !important;
+    background-color: var(--boja-zelena);
+    color: #fff;
+}
+
+.card-header.card-header-braon {
+    background-color: var(--boja-braon);
+    color: #fff;
+}
+
+.card-header.card-header-light {
+    background-color: #eef3e6;
+    color: var(--boja-zelena-tamna);
+}
+
+/* ---------- Dugmici ---------- */
+.btn {
+    border-radius: .8rem;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: var(--boja-zelena);
+    border-color: var(--boja-zelena);
+}
+
+.btn-primary:hover {
+    background-color: var(--boja-zelena-tamna);
+    border-color: var(--boja-zelena-tamna);
+}
+
+.btn-warning {
+    background-color: var(--boja-braon-svetla);
+    border-color: var(--boja-braon-svetla);
+    color: #fff;
+}
+
+.btn-warning:hover {
+    background-color: var(--boja-braon);
+    border-color: var(--boja-braon);
+    color: #fff;
+}
+
+.btn-outline-primary {
+    color: var(--boja-zelena-tamna);
+    border-color: var(--boja-zelena);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--boja-zelena);
+    border-color: var(--boja-zelena);
+}
+
+/* ---------- Forme ---------- */
+.form-control, .form-select {
+    border-radius: .7rem;
+    border-color: #d8d0bd;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--boja-zelena);
+    box-shadow: 0 0 0 .2rem rgba(76, 122, 63, .2);
+}
+
+/* ---------- Statistika na početnoj ---------- */
+.stat-broj {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.stat-ikona {
+    font-size: 2.4rem;
+    line-height: 1;
+}
+
+.kartica-statistika {
+    border-left: .35rem solid var(--boja-zelena);
+}
+
+.kartica-statistika.akcent-braon {
+    border-left-color: var(--boja-braon);
+}
+
+.kartica-statistika.akcent-zuta {
+    border-left-color: var(--boja-zuta);
+}
+
+.kartica-statistika.akcent-svetlozelena {
+    border-left-color: var(--boja-zelena-svetla);
+}
+
+/* ---------- Tabele ---------- */
+table.table th {
+    white-space: nowrap;
+    background-color: #eef3e6;
+    color: var(--boja-zelena-tamna);
+}
+
+/* ---------- Bedževi statusa ---------- */
+.badge-istice {
+    background-color: var(--boja-zuta);
+    color: #2e2e0e;
+}
+
+.badge-istekla {
+    background-color: #b35a3a;
+}
+
+/* ---------- Naslovni meni karte ---------- */
+.meni-kartica {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: #fff;
+    border-radius: 1rem;
+    text-decoration: none;
+    display: block;
+    transition: transform .15s ease-in-out, box-shadow .15s ease-in-out;
+    box-shadow: 0 .3rem .8rem rgba(0, 0, 0, .1);
+}
+
+.meni-kartica:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 .8rem 1.4rem rgba(0, 0, 0, .18);
+    color: #fff;
+}
+
+.meni-kartica .meni-ikona {
+    font-size: 2.6rem;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.meni-kartica.bg-zemljiste { background: linear-gradient(135deg, #6f4e37, #a9824c); }
+.meni-kartica.bg-usevi     { background: linear-gradient(135deg, #4c7a3f, #7caa57); }
+.meni-kartica.bg-stoka     { background: linear-gradient(135deg, #8a5a32, #c08552); }
+.meni-kartica.bg-zalihe    { background: linear-gradient(135deg, #2e5d32, #4c7a3f); }
+.meni-kartica.bg-prodaja   { background: linear-gradient(135deg, #b88a2e, #e0a83b); }
+.meni-kartica.bg-izvestaji { background: linear-gradient(135deg, #3a5f4a, #6f9b7e); }
+
+/* ---------- Login / registracija ---------- */
+.kartica-login {
+    border-radius: 1.2rem;
+}
+
+.login-naslov {
+    color: var(--boja-zelena-tamna);
+}
+
+/* ---------- Podnožje ---------- */
+footer.podnozje-gazdinstvo {
+    background-color: var(--boja-zelena-tamna);
+    color: #eef3e6;
+}
